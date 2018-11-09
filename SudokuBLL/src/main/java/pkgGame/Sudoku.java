@@ -44,6 +44,8 @@ public class Sudoku extends LatinSquare implements Serializable {
 	 */
 
 	private int iSqrtSize;
+	
+	private enum 
 
 	private HashMap<Integer, SudokuCell> cells = new HashMap<Integer, SudokuCell>();
 	
@@ -655,8 +657,18 @@ public class Sudoku extends LatinSquare implements Serializable {
 				}
 			}
 
-			return (SudokuCell)cells.get(Objects.hash(iRow,iCol));		
+			return (SudokuCell)cells.get(Objects.hash(iRow,iCol));	
 
 		}
+	}
+	private eGameDifficulty eGameDifficulty;
+	private Sudoku() {
+		eGameDifficulty=EASY;
+	}
+	
+	private static int PossibleValuesMultiplier(java.util.HashMap<java.lang.Integer,Sudoku.SudokuCell> cells) {
+		Sudoku s =new Sudoku();
+		fillRemaining();
+		Sudoku();
 	}
 }
