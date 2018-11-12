@@ -671,12 +671,14 @@ public class Sudoku extends LatinSquare implements Serializable {
 		
 		for (SudokuCell i :cells.values()) {
 			multiplier*=i.getLstValidValues().size();
-		}
-		return multiplier;
+		
 		
 		if (multiplier>Integer.MAX_VALUE) {
 			return Integer.MAX_VALUE;
 		}
-		
+		else {
+			multiplier*=i.getLstValidValues().size();
+		}
+	}
 	}
 }
