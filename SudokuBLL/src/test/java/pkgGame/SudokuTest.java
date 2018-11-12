@@ -137,6 +137,16 @@ public class SudokuTest {
 		}
 	}
 
-
+	@Test
+	public void valuesMultTest() {
+		try {
+			java.util.HashMap<java.lang.Integer,Sudoku.SudokuCell> tester = new java.util.HashMap<java.lang.Integer,Sudoku.SudokuCell>;
+			PossibleValuesMultiplier(tester);
+		}
+		Catch(Exception e){
+				fail("Test failed to get correct multiplier");
+			}
+		}
+	}
 
 }
