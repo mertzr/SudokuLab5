@@ -663,12 +663,20 @@ public class Sudoku extends LatinSquare implements Serializable {
 	}
 	private eGameDifficulty eGameDifficulty;
 	private Sudoku() {
-		eGameDifficulty=EASY;
+		this.eGameDifficulty=eGameDifficulty.EASY;
 	}
 	
 	private static int PossibleValuesMultiplier(java.util.HashMap<java.lang.Integer,Sudoku.SudokuCell> cells) {
-		Sudoku s =new Sudoku();
-		fillRemaining();
-		Sudoku();
+		int multiplier=1;
+		
+		for (SudokuCell i :cells.values()) {
+			multiplier*=i.getLstValidValues().size();
+		}
+		return multiplier;
+		
+		if (multiplier>Integer.MAX_VALUE) {
+			return Integer.MAX_VALUE;
+		}
+		
 	}
 }
