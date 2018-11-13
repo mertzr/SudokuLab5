@@ -662,6 +662,7 @@ public class Sudoku extends LatinSquare implements Serializable {
 		}
 	}
 	private eGameDifficulty eGameDifficulty;
+	private ArrayList<Integer> lstRemainingCells;
 
 	
 	private Sudoku() {
@@ -693,7 +694,6 @@ public class Sudoku extends LatinSquare implements Serializable {
 		
 	}
 	
-	private ArrayList<Integer> lstRemainingCells;
 	
 	public setRemainingCells() {
 		
