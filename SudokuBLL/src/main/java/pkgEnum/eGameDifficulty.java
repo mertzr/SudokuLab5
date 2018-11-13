@@ -53,5 +53,5 @@ public enum eGameDifficulty {
 			possibleValues.add(c);
 		}
 		return possibleValues;
-	}	
+	}
 }
