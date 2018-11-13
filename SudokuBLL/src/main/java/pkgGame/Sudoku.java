@@ -681,4 +681,21 @@ public class Sudoku extends LatinSquare implements Serializable {
 		}
 	}
 	}
+	
+	private removeCells() {
+		int r = Random().nextInt(iSize + 1);
+		
+		int c = Random().nextInt(iSize + 1);
+		
+		(SudokuCell)cells.get(Objects.hash(r,c)) = null;
+		
+	}
+	
+	private ArrayList<Integer> lstRemainingCells;
+	
+	public setRemainingCells() {
+		
+		 getAllValidCellValues
+		
+	}
 }
