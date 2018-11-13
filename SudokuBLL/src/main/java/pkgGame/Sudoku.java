@@ -698,4 +698,16 @@ public class Sudoku extends LatinSquare implements Serializable {
 		 getAllValidCellValues
 		
 	}
+	
+	public boolean IsDifficultyMet(int iDifficulties) {
+		eGameDifficulty value=eGameDifficulty.get(iDifficulties);
+		if (value==null);
+		return false;
+		if(value.getiDifficultyValue()>=this.level.getiDifficultyValue())
+			return true;
+		
+		return false;
+
+	}
+
 }
