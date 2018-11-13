@@ -662,6 +662,8 @@ public class Sudoku extends LatinSquare implements Serializable {
 		}
 	}
 	private eGameDifficulty eGameDifficulty;
+
+	
 	private Sudoku() {
 		this.eGameDifficulty=eGameDifficulty.EASY;
 	}
